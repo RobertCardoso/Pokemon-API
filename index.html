@@ -1,32 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
+  <meta charset="UTF-8">
+  <title>CodePen - Interactive Pokedex With Voice</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css'>
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
-    <h1>Pokemon</h1>
-     <h3 id="name"></h3>
-    <div id="box">
-       <img id="img">
-      
-       <p id="hp"></p>
-       <p id="attack"> </p>
-       <p id="defense">DEF:</p>
-       <p id="special-attack">SP-ATK: </p>
-       <p id="speed">SPEED: </p>
-       
+<!-- partial:index.partial.html -->
+<div class="container">
+    <div class="left-screen">
+      <div class="left-screen__top">
+        <div class="light-container">
+          <div class="light light--blue">
+          </div>
+        </div>
+        <div class="light light--red"></div>
+        <div class="light light--yellow"></div>
+        <div class="light light--green"></div>
+      </div>
+      <div class="left-screen__bottom">
+        <div class="main-screen">
+          <div class="main-screen__top-lights">
+          </div>
+          <!-- <div id="display" class="main-screen__display">
+            <div class="pokemon-image" ></div> -->
+            <div id="box" class="main-screen__display">
+                <img id="img">
+          </div>
+          <div class="main-screen__speaker-light"></div>
+          <div class="main-screen__speaker">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="left-screen__joint">
+        <div class="joint"></div>
+        <div class="joint"></div>
+        <div class="joint"></div>
+        <div class="joint"></div>
+        <div class="joint__reflextion"></div>
+      </div>
     </div>
+    <div class="right-screen">
+      <div class="right-screen__top">
+        <div></div>
+      </div>
+      <div class="right-screen__bottom">
+        <div class="info-container">
+          <button id="butao" type="submit">Catch!</button>
+          <section class="info-screen">
+            <div id="species" class="info">
+              <div class="label">HP:</div>
+              <div class="desc">...</div>
+            </div>
+            <div id="type" class="info">
+              <div class="label">Attack:</div>
+              <div class="desc">...</div>
+            </div>
+            <div id="height" class="info">
+              <div class="label">Defense:</div>
+              <div class="desc">...</div>
+            </div>
+            <div id="weight" class="info">
+              <div class="label">Speed:</div>
+              <div class="desc">...</div>
+            </div>
+            <div id="evolution" class="info">
+              <div class="label">Special Attack</div>
+              <div class="desc">...</div>
+            </div>
+            <div id="bio" class="info">
+              <div class="label">Class:</div>
+              <div class="desc">...</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- partial -->
+ 
+<script  src="./main.js"></script>
 
-    <div id="ab"></div>
-
-
-    <button id="butao">GET POKEMON</button>
-
-    <script src="main.js"></script>
 </body>
 </html>
