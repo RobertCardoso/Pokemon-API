@@ -5,6 +5,7 @@ let def = document.getElementById("defense")
 let spAtk = document.getElementById("special-attack")
 let speed = document.getElementById("speed")
 let ab = document.getElementById("ab")
+let name = document.getElementById("name")
 
 let box = document.getElementById("box")
 
@@ -16,6 +17,7 @@ butao.addEventListener('click', function(){
         // do something with the json payload
        
         let pokemon = json
+        let Pname = pokemon.forms[0].name
         let attack = pokemon.stats[1].base_stat
         let healthp = pokemon.stats[0].base_stat
         let defense = pokemon.stats[2].base_stat
@@ -28,6 +30,7 @@ butao.addEventListener('click', function(){
         let img = document.getElementById("img")
         img.src = pokemon.sprites.front_default
          
+        name.innerText = Pname.toUpperCase()
         atk.innerText = attack
         hp.innerText = healthp
         def.innerText = defense
