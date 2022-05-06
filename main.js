@@ -11,6 +11,9 @@ let box = document.getElementById("box")
 
 
 butao.addEventListener('click', function(){
+    let sound = new Audio("test.mp3"); 
+      sound.currentTime = 0;
+      sound.play();
     fetch("https://pokeapi.co/api/v2/pokemon/" + Math.floor(Math.random() * 150)).then(function(resp){
         return resp.json()
     }).then(function(json){
@@ -37,7 +40,7 @@ butao.addEventListener('click', function(){
         spAtk.innerText = speAtk
         speed.innerText = sp
         
-        box.append(img)
+        display.append(img)
        fetch(pokemon.abilities[0].ability.url).then(function(resp){
            return resp.json()
        }).then(function(json){
@@ -58,4 +61,4 @@ butao.addEventListener('click', function(){
 
 //  img https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png
 // 
-// 
+//
