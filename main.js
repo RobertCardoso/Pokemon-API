@@ -11,7 +11,7 @@ let box = document.getElementById("box")
 
 
 butao.addEventListener('click', function(){
-    let sound = new Audio("test.mp3"); 
+    let sound = new Audio("pling.mp3"); 
       sound.currentTime = 0;
       sound.play();
     fetch("https://pokeapi.co/api/v2/pokemon/" + Math.floor(Math.random() * 150)).then(function(resp){
