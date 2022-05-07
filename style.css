@@ -403,6 +403,11 @@ body {
   width: 250px;
   
 }
+#ab {
+  text-align: center;
+  font-size: 30px;
+  
+}
 .container .right-screen__bottom .info-container .info-input {
 
   color: yellow;
