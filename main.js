@@ -4,8 +4,8 @@ let hp = document.getElementById("hp")
 let def = document.getElementById("defense")
 let spAtk = document.getElementById("special-attack")
 let speed = document.getElementById("speed")
-let ab = document.getElementById("ab")
-let name = document.getElementById("name")
+let aby = document.getElementById("aby")
+let namep = document.getElementById("name")
 
 let box = document.getElementById("box")
 
@@ -33,25 +33,23 @@ butao.addEventListener('click', function(){
         let img = document.getElementById("img")
         img.src = pokemon.sprites.front_default
          
-        name.innerText = Pname.toUpperCase()
-        atk.innerText = attack
-        hp.innerText = healthp
-        def.innerText = defense
-        spAtk.innerText = speAtk
-        speed.innerText = sp
+        // namep.textContent = Pname.toUpperCase()
+        atk.textContent = attack
+        hp.textContent = healthp
+        def.textContent = defense
+        spAtk.textContent = speAtk
+        speed.textContent = sp
         
-        display.append(img)
        fetch(pokemon.abilities[0].ability.url).then(function(resp){
            return resp.json()
        }).then(function(json){
            let abilities = json
            let aName = abilities.name
-           ab.innerText = aName.toUpperCase()
+           aby.textContent = aName.toUpperCase()
            
         })
     
       
-       
        
     })
 })
