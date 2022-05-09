@@ -5,7 +5,7 @@ let def = document.getElementById("defense")
 let spAtk = document.getElementById("special-attack")
 let speed = document.getElementById("speed")
 let aby = document.getElementById("aby")
-let namep = document.getElementById("name")
+let namep = document.getElementById("ab")
 
 let box = document.getElementById("box")
 
@@ -33,7 +33,7 @@ butao.addEventListener('click', function(){
         let img = document.getElementById("img")
         img.src = pokemon.sprites.front_default
          
-        // namep.textContent = Pname.toUpperCase()
+        namep.textContent = Pname.toUpperCase()
         atk.textContent = attack
         hp.textContent = healthp
         def.textContent = defense
